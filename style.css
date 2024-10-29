@@ -1,0 +1,207 @@
+/* header{
+    border:2px solid black
+} */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header nav{
+  width: 100%;
+  height: 10vh;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: gainsboro; */
+}
+nav #logo{
+    /* border: 2px solid red; */
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+#logo img{
+    width:50px ;
+    border-radius: 20%;
+}
+#logo h2{
+    margin-left: 20px;
+    /* border: 2px  solid red; */
+}
+ul{
+    width: 60%;
+    /* border: 2px solid orchid; */
+    display: flex;
+    justify-content: space-around;
+}
+ul a{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    font-size: 17px;
+    
+}
+a:hover{
+    color: red;
+}
+ul a li{
+    display: inline;
+}
+main{
+    
+    width:100% ; 
+    /* border: 5px solid green; */
+    position: relative;
+}
+
+#img-div{
+    background-image: url("imgs/13.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+main #info-div{
+    /* border: 2px solid red; */
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    padding-top: 200px; 
+    padding-left: 200px;
+}
+#info-div h1{
+    /* border: 2px solid orange; */
+    display: inline-block;
+    font-weight: 900;
+    font-size: 35px;
+    width: 250px;
+    /* color: white; */
+}
+#info-div .red{
+    color: red;
+}
+#info-div p{
+    /* border: 2px solid green; */
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 22px;
+    color: white;
+}
+#info-div .btn{
+    background-color: rgb(0, 255, 255);
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 12px;
+    margin-right: 40px;
+    color: aliceblue;
+    font-weight: 800;
+    font-size: 18px;
+}
+#info-div .btn:hover{
+    border-radius: 20px;
+}
+
+
+
+#menubar-div{
+    /* width: 10%; */
+    display: none;
+}
+#menubar-div .lab-div{
+    width: 28px;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 5px;
+    color: black;
+}
+#check-menu{
+    display: none;
+}
+
+.animatedtext
+{
+    background: linear-gradient(200deg,#000,#da2121,#000000);
+    letter-spacing: 2px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 2s linear infinite;
+    position: relative;
+    /* font-size: 52px; */
+    }
+@keyframes shine
+{
+    0%
+    {
+    background-position-x: -500%;
+    }
+    50%
+    {
+    background-position-x: -300%;
+    }
+    100%
+    {
+    background-position-x: 500%;
+    }
+}
+
+
+
+
+/* meadia query */
+@media screen and (max-width:768px){
+    nav #logo{
+        width: 80%;
+        /* border: 2px solid red; */
+    }
+    #menubar-div{
+        display: block;
+        margin-right: 20px;
+        /* width: 20%; */
+    }
+    #menubar-div #check-menu{
+        display: none;
+    }
+    ul{
+        left: -1000px;
+        position: absolute;
+        top: 10vh;
+        background-color: black;
+        display: block;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        height: 100vh;
+        transition: all 2s 0s linear ;
+        
+    }
+    ul a li{
+        color: white;
+        display: block;
+        /* margin-bottom: 60px;
+        margin-top: 10px; */
+        margin: 20px auto 60px auto;
+    }
+    #check-menu:checked+ul{
+       left: 0px;
+    }
+
+    /* main........... */
+    #info-div h1{
+        font-size: 25px;
+    }
+    #info-div p{
+        font-size: 20px;
+    }
+    main #info-div{
+        /* padding: 0px; */
+        padding-top: 150px; 
+        padding-left: 80px;
+    }
+    #info-div .btn{
+        margin-right: 10px;
+    }
+}
