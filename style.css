@@ -1,71 +1,144 @@
-/* header{
-    border:2px solid black
-} */
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0; 
     box-sizing: border-box;
 }
-header nav{
-  width: 100%;
-  height: 10vh;
-  /* border: 2px solid red; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: gainsboro; */
+
+/* .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
 }
-nav #logo{
-    /* border: 2px solid red; */
-    width: 40%;
+
+nav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
     align-items: center;
+    background-color: hsl(283, 100%, 13%);
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem;
 }
-#logo img{
-    width:50px ;
-    border-radius: 20%;
-}
-#logo h2{
-    margin-left: 20px;
-    /* border: 2px  solid red; */
-}
-ul{
-    width: 60%;
-    /* border: 2px solid orchid; */
+
+nav ul {
+    list-style: none;
     display: flex;
-    justify-content: space-around;
+    gap: 7rem; 
+    justify-content: center; 
+    width: 100%;
+    margin: 10px 0px;
 }
-ul a{
+
+nav a {
     text-decoration: none;
-    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav #toggle,
+nav label {
+    display: none;
+} */
+
+/* ................................................ */
+
+nav{
+    width: 100%;
+    height: 10vh;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gainsboro;
+  }
+  nav #logo{
+      /* border: 2px solid red; */
+      width: 40%;
+      display: flex;
+      align-items: center;
+  }
+  #logo img{
+      width:50px ;
+      border-radius: 20%;
+  }
+  #logo h2{
+      margin-left: 20px;
+      /* border: 2px  solid red; */
+  }
+  ul{
+      width: 60%;
+      /* border: 2px solid orchid; */
+      display: flex;
+      justify-content: space-around;
+      
+  }
+  ul a{
+      text-decoration: none;
+      font-weight: 600;
+      color: black;
+      font-size: 17px;
+      
+  }
+  a:hover{
+      color: red;
+  }
+  ul li {
+      display: inline;
+  }
+
+  #menubar-div{
+    /* width: 10%; */
+    display: none;
+}
+#menubar-div .lab-div{
+    width: 28px;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 5px;
     color: black;
-    font-size: 17px;
-    
 }
-a:hover{
-    color: red;
+#check-menu{
+    display: none;
 }
-ul a li{
-    display: inline;
+
+#menubar-div{
+    /* width: 10%; */
+    display: none;
 }
+#menubar-div .lab-div{
+    width: 28px;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 5px;
+    color: black;
+}
+#check-menu{
+    display: none;
+}
+
+/*.................. main............................ */
+
 main{
-    
     width:100% ; 
     /* border: 5px solid green; */
     position: relative;
+    height: 100vh;
 }
 
-#img-div{
+main #img-div{
     background-image: url("imgs/13.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    width: 100%;
+    /* background-color: red; */
 }
 
 main #info-div{
     /* border: 2px solid red; */
     position: absolute;
     width: 100%;
+    height: 100%;
     top: 0px;
     padding-top: 200px; 
     padding-left: 200px;
@@ -88,7 +161,7 @@ main #info-div{
     font-size: 22px;
     color: white;
 }
-#info-div .btn{
+#info-div .btnn{
     background-color: rgb(0, 255, 255);
     text-decoration: none;
     margin-top: 20px;
@@ -97,26 +170,10 @@ main #info-div{
     color: aliceblue;
     font-weight: 800;
     font-size: 18px;
+    /* border: 2px solid green; */
 }
-#info-div .btn:hover{
+#info-div .btnn:hover{
     border-radius: 20px;
-}
-
-
-
-#menubar-div{
-    /* width: 10%; */
-    display: none;
-}
-#menubar-div .lab-div{
-    width: 28px;
-    height: 4px;
-    background-color: black;
-    margin-bottom: 5px;
-    color: black;
-}
-#check-menu{
-    display: none;
 }
 
 .animatedtext
@@ -147,15 +204,93 @@ main #info-div{
     background-position-x: 500%;
     }
 }
+/* ..........main end............................ */
+  
 
 
 
 
-/* meadia query */
-@media screen and (max-width:768px){
+
+
+
+/* ........................................ */
+.cards .card
+{
+    background-color: rgb(168, 222, 219);
+}
+
+.cardbtn{
+    width: 50%;
+    height: auto;
+    background-color: green;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    border-radius: 2rem;
+}
+
+.gallery-item
+{
+    overflow: hidden;
+}
+  .gallery-item img
+  {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .gallery-item img:hover
+  {
+    transform: scale(1.1);
+  }
+
+  .footer
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    background-color: hsl(283, 100%, 13%);
+    color: white;
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.4rem;
+  }
+
+@media (max-width: 768px) {
+    /* nav {
+        flex-direction: column;
+    }
+
+    nav .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        text-align: center; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+
+    nav label {
+        display: inline-block;
+        color: white;
+        cursor: pointer;
+    } */
+
+    /* ............................... */
+
     nav #logo{
         width: 80%;
         /* border: 2px solid red; */
+    }
+    #logo h2{
+        font-size: 20px;
     }
     #menubar-div{
         display: block;
@@ -178,18 +313,21 @@ main #info-div{
         transition: all 2s 0s linear ;
         
     }
-    ul a li{
+    ul li{
         color: white;
         display: block;
         /* margin-bottom: 60px;
         margin-top: 10px; */
         margin: 20px auto 60px auto;
     }
+    ul li a{
+        color: white;
+    }
     #check-menu:checked+ul{
        left: 0px;
     }
 
-    /* main........... */
+    /* ...................main........... */
     #info-div h1{
         font-size: 25px;
     }
@@ -201,7 +339,18 @@ main #info-div{
         padding-top: 150px; 
         padding-left: 80px;
     }
-    #info-div .btn{
+    #info-div .btnn{
         margin-right: 10px;
     }
+    /*.............. main end............... */
+
+    /* #toggle:checked ~ .menu {
+        height: 100%;
+    } */
+}
+@media screen and (max-width:320px) {
+    main #info-div{
+        padding-left: 50px;
+    }
+    
 }
